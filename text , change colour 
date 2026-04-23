@@ -1,6 +1,8 @@
 To update your background and switch from online URLs to local images, you'll need to modify the body and .home-bg sections of your CSS.
-### 1. Changing the Background Color
+
+ 1. Changing the Background Color
 Currently, your body uses a linear-gradient. To change it to a solid color or a different gradient, update the background property:
+
  * **For a solid color:**
    ```css
    body {
@@ -12,14 +14,18 @@ Currently, your body uses a linear-gradient. To change it to a solid color or a 
    }
    
    ```
+
  * **For a different gradient:** Change the Hex codes in linear-gradient(135deg, #color1 0%, #color2 100%).
-### 2. Linking Downloaded (Local) Images
+
+
+2. Linking Downloaded (Local) Images
 To use images you've downloaded, follow these steps:
-#### Step A: Organize your Folders
+step A: Organize your Folders
 Create a folder named images in the same directory as your index.html and style.css. Move your downloaded images into that folder.
-#### Step B: Update the CSS Path
+Step B: Update the CSS Path
 In your CSS, replace the Unsplash URL with the relative path to your file (e.g., images/my-background.jpg).
-**Update for .home-bg:**
+
+Update for .home-bg:
 ```css
 .home-bg {
     min-height: 100vh; 
@@ -34,13 +40,17 @@ In your CSS, replace the Unsplash URL with the relative path to your file (e.g.,
     align-items: center;
 }
 
-```
+
+
 #### Step C: Update HTML Images
 For images like the one using .hero-img or .about-me-photo, you need to update the src attribute in your **HTML** files (like index.html or rental.html):
+
+
 ```html
 <img src="images/profile-picture.jpg" class="about-me-photo" alt="Profile Photo">
 
 ```
+
 ### Quick Tips for Local Images:
  * **File Extensions:** Ensure the extension in your code matches the file exactly (e.g., .jpg is different from .jpeg or .png).
  * **No Spaces:** Avoid using spaces in your image filenames (use hero_bg.jpg instead of hero bg.jpg).
